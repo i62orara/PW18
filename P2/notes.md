@@ -2,11 +2,9 @@
 
 ### Explicación práctica 2
 
-
-Vamos a trabajar con XAMPP (PHP y MySQL)
+Utilizar XAMPP (PHP y MySQL)
 
 En php se empieza:
-
 
 ```
 <?php ... ?>
@@ -20,7 +18,6 @@ Ejemplo:
 ?>
 ```
 
-
 3 PHPs
 
 - Querys
@@ -29,4 +26,4 @@ Ejemplo:
 - Home
 - Empleados
 
-- Crear base de datos 
+- Crear base de datos
