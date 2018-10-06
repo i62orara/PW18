@@ -1,21 +1,25 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-<!--Establece el nombre la pestania-->
 	<title>home</title>
 </head>
-
 <body style="background-color:white;">
-	<!--center, permite colocar en el centro el header-->
-	<h1 align="center" style="background-color:#B2DF65;"> Empleados</h1>
-	<!--El enlace se crea antes de seleccionar la imagen.-->
-	<center><a href="empleado.html"> <img src="empleados.jpg" > </img> </a></center>
+<?php
 
-<!--align: permite centrar el texto y la tabla-->
+echo <<<_END
+
+	<h1 align="center" style="background-color:#B2DF65;"> Empleados</h1>
+	<center><a href="empleado.html"> <img src="PW18/P2/web/empleados.jpg" > </img> </a></center>
+	
+_END;
+
+ echo <<<_END
+
 <p align="center">Si desea informacion sobre los empleados pinche en la imagen,
 <br>esta le redireccionara a un enlace con los trabajadores.</p>
 
-</body>
+_END;
 
-</html>
+ ?>
+</body>
+ </html>

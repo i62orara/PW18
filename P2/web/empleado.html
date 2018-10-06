@@ -7,6 +7,8 @@
 
 <body>
 <!--Se centra el titulo y se concatena con la imagen de la casa,(permite volver al menu de inicio) posicionandola al lado derecho-->
+<?php
+echo <<<END_;
 <h1 align="center" style="background-color:#B2DF65;">Informacion de los empleados <right><a href="web1.html"> <img src="home.png" > </img> </a></right></h1>
 
 <!--cellspacing: espacio entre celdas. cellpadding: espacio entre bordes de la celda y su contenido-->
@@ -18,49 +20,21 @@
 				<th>Ciudad</th>
 				<th>Trabajo</th>
 				<th>Enlace</th>
+      		</tr>
+
+_END;
+/*Funciones que permitan sacar los datos de la lista*/
+
+echo <<<_END;
+		<!--datos para sacar los elementos de la la base de datos, en forma de lista-->
+    		<tr>
+
 			</tr>
 
-			<!--Datos-->
-			<tr>
-				<td>Manolo Ortiz</td>
-				<td>18</td>
-				<td>Madrid</td>
-				<td>Empresario</td>
-				<!--mostrar simbolo unicode es con &#(numero decimal)-->
-				<td align="center"><a href="empleado1.html">&#9757</a></td>
-			</tr>
-			<tr>
-				<td>Juan Jose</td>
-				<td>20</td>
-				<td>Barcelona</td>
-				<td>Obrero</td>
-				<td align="center"><a href="/home/i62orara/Desktop/dcs/empleado/empleado2.html">&#9757</a></td>
-			</tr>
-			<tr>
-				<td>Ricardo Pedregosa</td>
-				<td>39</td>
-				<td>Cadiz</td>
-				<td>Periodista</td>
-				<td align="center"><a href="/home/i62orara/Desktop/dcs/empleado/empleado3.html">&#9757</a></td>
-			</tr>
-			<tr>
-				<td>Maria Delgado</td>
-				<td>34</td>
-				<td>Cadiz</td>
-				<td>Mantenimiento</td>
-				<td align="center"><a href="/home/i62orara/Desktop/dcs/empleado/empleado4.html">&#9757</a></td>
-			</tr>
-			<tr>
-				<td>Manuel Diaz</td>
-				<td>54</td>
-				<td>Cadiz</td>
-				<td>Obrero</td>
-				<td align="center"><a href="/home/i62orara/Desktop/dcs/empleado/empleado5.html">&#9757</a></td>
-			</tr>
 	</table>
-
-	<p align="center"> Pulse en el simbolo "&#9757" para obtener mas informacion sobre los empleados.</p>
+ 	<p align="center"> Pulse en el simbolo "&#9757" para obtener mas informacion sobre los empleados.</p>
 	<p align="center"> Si desea volver al menu de inicio, pulse en el icono de la casa.</p>
+ _END; 
+ ?>
 </body>
-
 </html>
