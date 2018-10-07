@@ -5,6 +5,7 @@ use Empleados;
 create table empleados
 	(dni INT(8) ,
 	nombreCompleto VARCHAR(64),
+	imagen VARCHAR(64),
 	estudiosSuperiores VARCHAR(16) not null,
 	situacionLaboral VARCHAR(16) not null,
 	email VARCHAR(32) not null,
