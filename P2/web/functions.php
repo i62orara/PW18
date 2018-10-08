@@ -44,14 +44,19 @@ class empQueries{
     return $empleados;
   }
 
-  public function getEmp($dni){
+  public function getEmp($dniEmp){
 
     $empleado;
+    $query;
     $i = 0;
-    $empleado = $this->dbc->prepare("SELECT * FROM empleados WHERE empleados.dni = $dni");
-    $empleado = $empleado->execute();
-
-    return $empleado;
+    $sentence = $this->dbc->prepare("SELECT * FROM empleados WHERE empleados.dni = '$dniEmp'");
+    if($sentence->execute()){
+      $emp = $sentence->fetch();
+      return $emp;
+    }else{
+      echo "Error al cargar al usuario con DNI: $dniEmp";
+      return null;
+    }
   }
 
 } // Fin empQueries()
