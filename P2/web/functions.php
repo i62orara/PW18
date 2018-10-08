@@ -14,7 +14,6 @@ class empQueries{
   public $pass = "";
   public $dbc;
 
-
   public function __construct(){  // Constructo de la clase empQueries()
     $this->dbc = $this->dbconnect();
   }
@@ -43,6 +42,16 @@ class empQueries{
       }
     }
     return $empleados;
+  }
+
+  public function getEmp($dni){
+
+    $empleado;
+    $i = 0;
+    $empleado = $this->dbc->prepare("SELECT * FROM empleados WHERE empleados.dni = $dni");
+    $empleado = $empleado->execute();
+
+    return $empleado;
   }
 
 } // Fin empQueries()

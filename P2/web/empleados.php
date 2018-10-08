@@ -9,8 +9,14 @@
 
   <!--Se centra el titulo y se concatena con la imagen de la casa,(permite
   volver al menu de inicio) posicionandola al lado derecho-->
-    <h1 align="center" style="background-color:#263238 ; color:#C2C2C2" >Lista de
-      empleados  <right><a href="index.php"><img src="pics\home.ico"></img></a></right></h1>
+    <h1 align="center" style="background-color:#263238 ; color:#C2C2C2">
+      Lista de empleados
+      <right>
+        <a href="index.php">
+          <img src="pics\home.ico"></img>
+        </a>
+      </right>
+    </h1>
 
 <?php
 
@@ -36,17 +42,21 @@ echo "<h3 align=center> Listado completo de empleados </h3>
         <th class=list>Nombre </th>
         <th class=list>DNI </th>
         <th class=list>Email </th>
+        <th class=lists>Detalles </th>
       </tr>";
 
   // Realizamos una petición para obtener un array con todos los empleados
   $emps = $qo->getAllEmp();
-
+  $urlEmp;
   // Mostramos todos y cada uno de los empleados
   foreach($emps as $emp){
+    $urlEmp = "$emp[dni]" . '.php';   // Cogemos el DNI de la tupla para irnos a
+                                      // su respectivo fichero
     echo "<tr align=left class=list>
       <td class=list>$emp[nombreCompleto]</td>
       <td class=list>$emp[dni]</td>
       <td class=list>$emp[email]</td>
+      <td class=list align=center><a href=$urlEmp>+ info</a></td>
     </tr>";
   }
 
